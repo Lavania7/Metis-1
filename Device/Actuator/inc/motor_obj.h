@@ -19,6 +19,7 @@
 #include "main.h"
 /* Private Includes ----------------------------------------------*/
 #include "rm_motor.h"
+#include "math_utils.h"
 
 #ifdef __cplusplus
 extern "C"{
@@ -34,7 +35,9 @@ extern "C"{
 
 typedef struct __encoder_DeviceTypedef
 {
-    
+    float curr; // 当前原始编码器值（0 ~ mod-1）
+    float prev; // 上一周期值
+    float position; // 展开后的连续位置
 }encoder_DeviceTypedef;
 
 
@@ -72,6 +75,8 @@ void utree_motor_send_cmd();
 // void custom_motor_update_device();
 // void custom_motor_apply_cmd();
 // void custom_motor_send_cmd();
+
+void encoder_update(encoder_DeviceTypedef *enc, float new_value, float mod);
 
 /* Extern Varibles & Objects --------------------------------------*/
 

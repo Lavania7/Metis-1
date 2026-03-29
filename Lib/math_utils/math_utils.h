@@ -39,7 +39,7 @@ extern "C"{
 /* External Functions ---------------------------------------------*/
 
 float clamp(float x, float limit);
-
+float wrap_delta(float x, float y, float mod);
 /* Extern Varibles & Objects --------------------------------------*/
 
 #ifdef __cplusplus
