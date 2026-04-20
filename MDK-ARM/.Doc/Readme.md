@@ -1,4 +1,5 @@
-# mech_arm 说明文档
+# Metis 说明文档
+本项目为机器人相关开发的软件架构
 
 ## Release Notes 更新说明
 本项目使用VScode的eide插件，配合keil进行开发。这套流程的配置教程待更新
@@ -22,5 +23,8 @@ ProjectRoot
 ├── Drv : Drivers, M3508, DM_motor, etc.
 ├── Lib : Algorithms and utilities, PID, uint_to_float, etc.
 └── Sys : System control, flags, muti-robots, etc.
+
+## By-talk 杂谈
+这个项目的命名来源是希腊神话中的“智慧与技艺女神”：Metis
 
 祝开发愉快！
